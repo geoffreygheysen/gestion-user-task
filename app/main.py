@@ -1,6 +1,8 @@
 from init_db import session, db_connected
+from models.service.menu import Menu 
 
 if db_connected:
-    print("✅ La DB est connectée ✅")
+    menu = Menu(session)
+    menu.affichage()
 else:
-    print("❌ La DB n'est pas connectée ❌")
+    print("❌ La base de données n'est pas connectée.")

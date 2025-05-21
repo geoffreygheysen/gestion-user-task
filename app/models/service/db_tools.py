@@ -4,7 +4,7 @@ class DbTools:
     
     def commit(self):
         try:
-            self.commit()
+            self.session.commit()
         except Exception as e:
             self.session.rollback()
             raise e
