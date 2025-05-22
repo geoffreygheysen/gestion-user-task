@@ -16,3 +16,4 @@ class User(Base):
     
     # Relation 1:N (un utilisateur a plusieurs tâches)
     tasks = relationship("Task", back_populates="user")
+    

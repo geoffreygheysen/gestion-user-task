@@ -10,7 +10,7 @@ Documentation étapes par étapes du projet:
 
 ### Setup du dossier de l'application et ses fichiers (app) 📂
 
-        - app/ 
+        - app/
             - models/
                 - db/
                     - base.py
@@ -31,43 +31,43 @@ Documentation étapes par étapes du projet:
 
     📂 app/
         Dossier principal de l'application. Tout le code source se trouve ici.
-    
+
         🔹 models/
             Ce dossier contient la logique métier et la structure des données. Il est divisé en deux sous-dossiers :
-    
+
             🔸 db/
                 Contient les modèles de base de données définis avec un ORM (ici SQLAlchemy).
-    
+
                 base.py : définit la base commune de tous tes modèles (Base = declarative_base()). C’est la fondation de l'ORM.
-    
+
                 task.py : définit le modèle Task (structure d’une tâche : id, description).
-    
+
                 user.py : définit le modèle User (structure d’un utilisateur : username, email, password, is_active).
-    
+
             🔸 service/
                 Contient la logique métier associée aux modèles — fonctions de manipulation ou de gestion des objets User, Task, etc.
-    
+
                 db_tools.py : outils pour interagir avec la base (ex : création de session, gestion des connexions...).
-    
+
                 task.py : logique de gestion des tâches.
-    
+
                 user.py : logique pour gérer les utilisateurs.
-    
+
                 menu.py : gérer l’affichage des menus.
-    
+
         📄 init_db.py
             Script qui permet de créer ou initialiser ta base de données.
-    
+
         📄 main.py
             Point d’entrée principal de l'application.
             C’est ce fichier que tu exécutes pour lancer l'app !
-    
+
     📄 .gitignore
         Fichier qui indique à Git quels fichiers ou dossiers ignorer (ex : .venv/, __pycache__/, config.py).
-    
+
     📄 README.md
         Contient la documentation du projet : description, instructions d’installation, comment lancer l’app, etc.
-    
+
     📄 requirements.txt
         Liste des dépendances Python de ton projet. Utilisé pour installer tous les paquets nécessaires avec
 
@@ -113,9 +113,10 @@ URL_DB = f"{scheme}://{username}:{password}@{hostname}:{port}/{database_name}"
 ```
 
 ### Position du fichier config.py
+
 ```python
 
-        - app/ 
+        - app/
             - models/
                 - db/
                     - base.py
@@ -132,7 +133,7 @@ URL_DB = f"{scheme}://{username}:{password}@{hostname}:{port}/{database_name}"
         - .gitignore
         - README.md
         - requirements.txt
-        
+
 ```
 
 ## 🚀 Lancement
