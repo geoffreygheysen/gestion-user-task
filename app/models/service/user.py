@@ -2,6 +2,7 @@
 from sqlalchemy import text
 from models.db.user import User as UserModel
 from .db_tools import DbTools # outil de base pour session + commit
+from models.utils.security import hash_password  # importe la fonction du fichier security.py
 
 class User(DbTools):
     
@@ -12,7 +13,8 @@ class User(DbTools):
     
     # Créer un utilisateur
     def create(self, username, email, password):
-        user = UserModel(username=username, email=email, password=password)
+        hashed_pw = hash_password(password)
+        user = UserModel(username=username, email=email, password=hashed_pw)
         self.session.add(user)
         self.commit()
         return user
