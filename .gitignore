@@ -1,2 +1,6 @@
 .venv
-/app/config.py
+/app/config.py*
+
+# Ignorer les fichiers compilés Python
+*.pyc
+__pycache__/
